@@ -1,4 +1,4 @@
-.card{
+.card, .hidden-visa, .showed-visa{
     transition: transform 1s ease-in-out;
 }
 
