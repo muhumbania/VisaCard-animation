@@ -8,20 +8,20 @@ button.addEventListener('click', function(){
     position = !position;
 
     if(position){
-        setTimeout(function(){
-            card.style.transform = "rotateY(180deg)";
-            document.querySelector('.hidden-visa').style.display = "none";
-            document.querySelector('.showed-visa').style.display = "inline";
-            showText.innerHTML = "Hide details";
-        }, 500);
+
+        Yrotation("none", "inline", "Hide details", "rotateY(180deg)");
     }else{
-        setTimeout(function(){
-            card.style.transform = "rotateY(0deg)";
-            document.querySelector('.hidden-visa').style.display = "inline";
-            document.querySelector('.showed-visa').style.display = "none";
-            showText.innerHTML = "Show details";
-        }, 500);
+
+        Yrotation("inline", "none", "Show details", "rotateY(0deg)");
     }
 });
 
+function Yrotation(hiddenView, showedView, legend, degree){
+    setTimeout(function(){
+        card.style.transform = degree;
+        document.querySelector('.hidden-visa').style.display = hiddenView;
+        document.querySelector('.showed-visa').style.display = showedView;
+        showText.innerHTML = legend;
+    }, 500);
+}
 
