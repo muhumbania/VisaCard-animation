@@ -9,10 +9,10 @@ button.addEventListener('click', function(){
 
     if(position){
 
-        Yrotation("none", "inline", "Hide details", "rotateY(180deg)");
+        Yrotation("none", "inline", "hide details", "rotateY(180deg)");
     }else{
 
-        Yrotation("inline", "none", "Show details", "rotateY(0deg)");
+        Yrotation("inline", "none", "show details", "rotateY(0deg)");
     }
 });
 
@@ -22,6 +22,7 @@ function Yrotation(hiddenView, showedView, legend, degree){
         document.querySelector('.hidden-visa').style.display = hiddenView;
         document.querySelector('.showed-visa').style.display = showedView;
         showText.innerHTML = legend;
+        button.setAttribute('name', legend.substring(0, 4));
     }, 500);
 }
 
